@@ -1,3 +1,9 @@
-const App = () => <div>Hello, world!</div>;
+import CurrentForecast from './components/CurrentForecast';
+
+const App = () => (
+  <div>
+    <CurrentForecast />
+  </div>
+);
 
 export default App;
