@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { loadCurrentForecast } from '../store/current/actions';
 
 export const CurrentForecast = ({ loadCurrentForecast, forecast }) => {
   useEffect(() => {
@@ -12,4 +14,10 @@ export const CurrentForecast = ({ loadCurrentForecast, forecast }) => {
   );
 };
 
-export default CurrentForecast;
+const mapStateToProps = state => ({
+  forecast: state.current.forecast,
+});
+
+const mapDispatchToProps = { loadCurrentForecast };
+
+export default connect(mapStateToProps, mapDispatchToProps)(CurrentForecast);

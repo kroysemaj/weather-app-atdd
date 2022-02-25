@@ -1,9 +1,11 @@
+import { Provider } from 'react-redux';
+import store from './store';
 import CurrentForecast from './components/CurrentForecast';
 
 const App = () => (
-  <div>
+  <Provider store={store}>
     <CurrentForecast />
-  </div>
+  </Provider>
 );
 
 export default App;
