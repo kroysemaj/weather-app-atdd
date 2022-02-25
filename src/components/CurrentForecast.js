@@ -15,7 +15,7 @@ export const CurrentForecast = ({ loadCurrentForecast, forecast }) => {
 };
 
 const mapStateToProps = state => ({
-  forecast: state.current.forecast,
+  forecast: state.current,
 });
 
 const mapDispatchToProps = { loadCurrentForecast };
