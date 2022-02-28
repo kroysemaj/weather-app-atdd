@@ -13,11 +13,11 @@ const client = axios.create({
  */
 
 const api = {
-  loadCurrentForecast(lat, long) {
+  loadCurrentForecast() {
     const params = {
       appid: API_KEY,
-      lat,
-      long,
+      lat: 33,
+      lon: -33,
     };
     return client.get('/weather', { params }).then(response => response.data);
   },
