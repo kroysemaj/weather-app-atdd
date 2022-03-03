@@ -1,4 +1,4 @@
-export const currentMockData = {
+export const currentApiMockData = {
   coord: {
     lon: 83.0458,
     lat: 42.3314,
