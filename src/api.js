@@ -15,9 +15,9 @@ const client = axios.create({
 const api = {
   loadCurrentForecast() {
     const params = {
+      lat: 42.33143,
+      lon: -83.0458,
       appid: API_KEY,
-      lat: 33,
-      lon: -33,
     };
     return client.get('/weather', { params }).then(response => response.data);
   },
